@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font-family: 'Montserrat';
+    /* line-height: 1.6; */
+    font-size: 0.9rem;
+    text-align:left;
+    /* background-color: #020306; */
+   }
+/* h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: #ecf1f5;
+} */
