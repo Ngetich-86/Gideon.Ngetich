@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
     // const navigate = useNavigate(); useNavigate
@@ -46,7 +46,7 @@ const Navbar = () => {
 
             <div className="flex-none gap-2">
                 <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-2 text-[#0099ff] font-bold text-links">
+                <ul className="menu menu-horizontal px-2 text-[#0099ff] font-semi-bold text-links text-2xl ">
   <li><a href="#">Home</a></li>
   <li><a href="#about">About Me</a></li>
   <li><a href="#experience">Experience</a></li>

@@ -1,6 +1,4 @@
 
-
-// export default HomePage;
 import { IoLogoReddit } from 'react-icons/io5';
 import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from "react-icons/io5";
 import { HiDownload } from "react-icons/hi";
@@ -64,8 +62,8 @@ const HomePage = () => {
             />
           </span>
         </h3>
-        <p className="text-lg md:text-4xl mb-6 text-slate-200 font-semibold">
-          Software Developer
+        <p className="text-lg md:text-3xl mb-6 text-slate-200 ">
+          Software Developer & Cloud Enthusiast
         </p>
         <a
           href="https://stdntpartners-my.sharepoint.com/:b:/g/personal/gideon_ngetich_studentambassadors_com/EeJudrpr3_ZKlFmA-GzZfR0BDlSnxsuOeda2QP3m20hbQQ?e=8P2hSp"
@@ -79,21 +77,13 @@ const HomePage = () => {
       </div>
 
       {/* Image Section */}
-      <div className="w-64 md:w-80 mt-9 md:mt-0">
+      <div className="w-64 md:w-80 mt-4 md:mt-0">
         <img
           src={image1}
           alt="me"
           className="w-full h-auto rounded-lg shadow-lg transform transition duration-500 hover:scale-105"
         />
       </div>
-	  {/* <div className="absolute inset-0 flex justify-center items-center ml-4 mt-9">
-        <a
-          href="#contact"
-          className="bg-gradient-to-r from-green-400 to-blue-500 text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg hover:from-blue-500 hover:to-green-400 transition duration-300"
-        >
-          Let's Talk
-        </a>
-      </div> */}
     </div>
   );
 };
