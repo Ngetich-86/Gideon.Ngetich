@@ -46,7 +46,7 @@ const Navbar = () => {
 
             <div className="flex-none gap-2">
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-2 text-green-500 font-bold text-links">
+                    <ul className="menu menu-horizontal px-2 text-[#0099ff] font-bold text-links">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about-us">About Me</Link></li>
                         <li><Link to="/events">Experience</Link></li>

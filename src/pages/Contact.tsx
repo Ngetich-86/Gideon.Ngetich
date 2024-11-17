@@ -56,25 +56,25 @@ export const Contact = () => {
       <p className='text-center'>Get In Touch</p>
       <div className='flex flex-col md:flex-row p-5 justify-center items-center h-fit gap-4 md:gap-8 pb-10 text-text-light'>
         <div className='flex flex-col w-full md:w-[30%] space-y-4'>
-          <div className='bg-gray-800 p-5 rounded-lg text-center flex flex-col items-center'>
-            <MdLocationOn className='text-[#00df9a] text-2xl mb-2' />
-            <h3 className='text-[#00df9a] text-lg md:text-xl'>Location</h3>
+          <div className='shadow-lg p-5 rounded-lg text-center flex flex-col items-center'>
+            <MdLocationOn className='text-[#00bfff] text-2xl mb-2' />
+            <h3 className='text-[#4169e1] text-lg md:text-xl'>Location</h3>
             <p>Kirinyaga, Kenya</p>
           </div>
-          <div className='bg-gray-800 p-5 rounded-lg text-center flex flex-col items-center'>
-            <MdEmail className='text-[#00df9a] text-2xl mb-2' />
-            <h3 className='text-[#00df9a] text-lg md:text-xl'>Email</h3>
+          <div className='shadow-lg p-5 rounded-lg text-center flex flex-col items-center'>
+            <MdEmail className='text-[#00bfff] text-2xl mb-2' />
+            <h3 className='text-[#4169e1] text-lg md:text-xl'>Email</h3>
           </div>
-          <div className='bg-gray-800 p-5 rounded-lg text-center flex flex-col items-center'>
-            <MdPhone className='text-[#00df9a] text-2xl mb-2' />
-            <h3 className='text-[#00df9a] text-lg md:text-xl'>Phone</h3>
+          <div className='shadow-lg p-5 rounded-lg text-center flex flex-col items-center'>
+            <MdPhone className='text-[#00bfff] text-2xl mb-2' />
+            <h3 className='text-[#4169e1] text-lg md:text-xl'>Phone</h3>
             <p>(+254) 742252910</p>
           </div>
         </div>
 
         {/* Right Side: Contact Form */}
-        <div className='flex flex-col w-full md:w-[50%] bg-gray-800 p-5 rounded-lg justify-center'>
-          <h2 className='text-xl md:text-2xl font-bold text-[#00df9a] text-center mb-5'>Reach Out!</h2>
+        <div className='flex flex-col w-full md:w-[50%] shadow-lg p-5 rounded-lg justify-center'>
+          <h2 className='text-xl md:text-2xl font-bold text-[#4169e1] text-center mb-5'>Reach Out!</h2>
           <form className='flex flex-col space-y-4' onSubmit={handleSubmit}>
             <input
               type='text' name='name' value={formData.name} onChange={handleChange} placeholder='Full Name'
@@ -98,7 +98,7 @@ export const Contact = () => {
             ></textarea>
             <button
               type='submit'
-              className='p-2 bg-[#00df9a] text-black rounded-lg hover:bg-white hover:text-black transition duration-300 md:w-[25%]'
+              className='p-2 bg-[#4169e1] text-black rounded-lg hover:bg-white hover:text-black transition duration-300 md:w-[25%]'
               disabled={loading}
             >
               {loading ? 'Sending...' : 'Send Message'}
