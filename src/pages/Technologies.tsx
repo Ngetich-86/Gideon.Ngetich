@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-// import BallCanvas from "../../canvas/Ball"; // Uncomment if you plan to use this component
-// import { TypingText } from "../../components/animationtext/TypingText"; // Uncomment if you plan to use this component
+
 
 const Technologies = () => {
   const [displaySkills, setDisplaySkills] = useState(false);
