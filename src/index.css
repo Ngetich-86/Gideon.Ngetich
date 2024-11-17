@@ -17,17 +17,3 @@ body{
     margin: 0;
     color: #ecf1f5;
 } */
-button{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.2;
-    margin: 0;
-    color: #ecf1f5;
-    background-color: #f9a826;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}

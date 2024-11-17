@@ -11,6 +11,7 @@ import AnimatedCursor from 'react-animated-cursor';
 // import { Routes, Route } from 'react-router-dom';
 import StarBackground from "./components/Background/starBackground"
 import ShootingStars from "./components/Background/shootingStars"
+import Technologies from "./pages/Technologies"
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
     <HomePage />
     <About />
     {/* <Education /> */}
+    <Technologies />
     <Experience />
     <Projects />
     <Certification />
