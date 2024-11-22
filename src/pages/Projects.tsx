@@ -23,7 +23,7 @@ const Projects = () => {
                             </div> */}
                             <div className='flex justify-around'>
                                 <a href={project.demo} target="_blank" rel="noopener noreferrer" className='block  rounded-lg p-2 text-base bg-[#4169e1] hover:bg-white hover:text-black transition duration-300 ' >
-                                    Link
+                                    Live Link
                                 </a>
                                 <a href={project.github} target="_blank" rel="noopener noreferrer" className='block rounded-lg p-2 text-base border-solid border-2 border-[#4169e1] hover:border-[#4169e1] transition duration-300 ' style={{ width: 'fit-content ' }}>
                                     GitHub
