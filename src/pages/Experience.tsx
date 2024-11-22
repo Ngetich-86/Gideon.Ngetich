@@ -15,6 +15,11 @@ const Experience = () => {
                             <div className='w-[90%]'>
                                 <h5 className='text-[#00bfff] flex flex-col md:flex-row justify-between'><b>{experience.title}</b> <span className="text-text-light text-sm md:text-xs">{experience.period}</span></h5>
                                 <p className='pt-2 leading-7 text-lg'>{experience.description}</p>
+                                <div className='flex flex-wrap justify-evenly items-center mb-4'>
+                                {experience.technologiesLearnt.map((tech: string, index) => (
+                                    <span key={index} className='px-2 m-2 bg-[#ADD8E6] text-black rounded-lg text-sm'>{tech}</span>
+                                ))}
+                            </div>
                             </div>
                         </div>
                     )
