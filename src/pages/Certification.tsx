@@ -1,9 +1,10 @@
 import CertData from "../components/CertData";
+import Confetti from "../components/Confetti";
 
 const Certification = () => {
   return (
     <>
-   <h1 className='text-xl md:text-4xl font-bold text-center'>Badges & Certifications</h1>
+   <h1 className='text-xl md:text-4xl font-bold text-center'><Confetti />Badges & Certifications</h1>
 <p className='text-center text-lg md:text-2xl p-5 text-[#1e90ff]'>Click to view my verified achievement</p>
 
 <div className='flex flex-col md:flex-row p-5 md:flex-wrap justify-center items-center h-fit gap-4 md:gap-12 md:pt-24 pb-10 text-text-light'>
