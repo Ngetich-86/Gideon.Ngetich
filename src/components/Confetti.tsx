@@ -56,7 +56,7 @@ function Confetti() {
                 height={dimensions.height}
                 colors={['#00bcd4', '#ff5722', '#ffb74d']}
                 wind={0.1}
-                recycle={true}
+                recycle={false}
                 numberOfPieces={360}
                 gravity={0.2}
             />
