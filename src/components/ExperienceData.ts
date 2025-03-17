@@ -53,6 +53,14 @@ export const ExperienceData: TypeExpereinceData[] = [
         description: 'Promoted Creds to students and faculty members, and organized events to increase awareness of the platform. Collaborated with the marketing team to create promotional materials and social media campaigns.',
         period: 'February 2025 - Present',
         technologiesLearnt: ["Marketing","Social Media","Promotion"]
+    },
+    {
+        id: 5,
+        logo: "https://computersocietyofkirinyaga.tech/assets/logo-DROmQ3cj.jpg",
+        title: 'Web Development Lead - Computer Society Of Kirinyaga',
+        description: 'Led weekly hands-on web development sessions every Wednesday to help peers enhance their skills. Organized practical workshops covering frontend, backend, and database concepts to provide comprehensive learning experiences.',
+        period: 'May 2024 - April 2025',
+        technologiesLearnt: ["Web development","APIs","Databases"]
     }
     
 ]
