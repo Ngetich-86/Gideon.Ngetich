@@ -55,7 +55,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="h-fit min-h-screen w-full banner-gradient-background flex items-center justify-center max-xl:px-4 max-xl:pt-32 max-xl:pb-12">
+    <div className="h-fit min-h-screen w-full banner-gradient-background flex items-center justify-center pt-24 pb-12 px-4">
       {/* Social Media Icons Section */}
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-6 text-2xl z-50">
         <a
@@ -97,7 +97,7 @@ const HomePage = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-20">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Text Section */}
           <div className="flex-1 space-y-8">

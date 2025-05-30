@@ -1,16 +1,10 @@
-// import IMG1 from "../../assets/comp.jpg";
-// import IMG2 from "../../images/react-portfolio.jpg";
-// import IMG3 from "../../images/first-portfolio.jpg";
-// import IMG4 from "../../images/comp.jpg";
-// import IMG5 from "../../images/machine.jpg";
-// import IMG6 from "../../images/netflix.jpg";
 import GalleryApp from "../assets/images/GalleryApp.png"
 import healtSystem from "../assets/images/healt-system.png"
 import seatReserve from "../assets/images/seat-reserv-project.png"
 const ProjectData = [
     {
       id: 1,
-      image: healtSystem,
+      image: seatReserve,
       title: "Automated Seat reservation system in PSV",
       github: "https://github.com/Ngetich-86/Auto-seat-psv-Client",
       text: "A comprehensive seat reservation system for public service vehicles (PSVs) that automates the booking process, enhances user experience, and optimizes seat management.",
@@ -26,7 +20,7 @@ const ProjectData = [
     },
     {
       id: 3,
-      image: seatReserve,
+      image: healtSystem,
       title: "Health-info-system",
       github: "https://github.com/Ngetich-86/Health-Info-system-Task",
       text: "A simple health information management system that allows doctors to register clients, create health programs, enroll clients in multiple programs, and expose client profiles via an API.",  

@@ -79,7 +79,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="min-h-screen gradient-background text-white pt-20">
+    <section id="about" className="min-h-screen gradient-background text-white pt-20 container">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Column - Image */}

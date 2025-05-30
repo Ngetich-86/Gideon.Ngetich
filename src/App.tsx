@@ -35,7 +35,6 @@ const App = () => {
     <Navbar />
     <HomePage />
     <About />
-    {/* <Education /> */}
     <Technologies />
     <Experience />
     <Projects />

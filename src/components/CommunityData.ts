@@ -24,12 +24,12 @@ export const communityPhotos: CommunityPhoto[] = [
     title: "Annual CSK Inaugural Event",
     description: "Community members donating food for those in need"
   },
-  // {
-  //   id: 4,
-  //   imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3",
-  //   title: "Educational Workshops",
-  //   description: "Sharing knowledge and skills with community members"
-  // },
+  {
+    id: 4,
+    imageUrl: "https://res.cloudinary.com/dwsxs74ow/image/upload/v1748622685/iljdaoyde7fhzmb0ujtr.jpg",
+    title: "Global AI Bootcamp Nairobi",
+    description: ""
+  },
   // {
   //   id: 5,
   //   imageUrl: "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3",
