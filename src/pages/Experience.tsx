@@ -1,32 +1,94 @@
-import { ExperienceData } from "../components/ExperienceData"
+import { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import { ExperienceData } from '../components/ExperienceData';
 
-const Experience = () => {
+const Experience: React.FC = () => {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      distance: '50px',
+      duration: 1000,
+      delay: 200,
+      easing: 'ease-in-out',
+      reset: true,
+    });
+
+    // Reveal the title section
+    sr.reveal('.experience-title', {
+      origin: 'bottom',
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+    });
+
+    // Reveal each experience card with a delay
+    sr.reveal('.experience-card', {
+      origin: 'bottom',
+      distance: '100px',
+      duration: 800,
+      delay: 200,
+      easing: 'ease-in-out',
+      interval: 100,
+    });
+  }, []);
+
   return (
-    <div id="experience">
-            <h1 className='text-xl md:text-4xl font-bold text-center'>  Experience</h1>
-            <div className='flex flex-col p-5 md:flex-wrap md:flex-row justify-center items-center h-fit gap-4 md:gap-8 xl:gap-10 md:pt-[3.5rem] pb-8 text-text-light'>
-                {ExperienceData.map((experience) => {
-                    return (
-                        <div key={experience.id} className='flex shadow-lg w-full md:w-[48%] 2xl:w-[40%]  p-4 cursor-pointer transform transition duration-300 hover:-translate-y-1 gap-4 rounded-lg'>
-
-                            <div className="w-[10%] flex justify-center items-start md:items-center">
-                                <img src={experience.logo} alt={experience.title} className='w-12 rounded-lg' />
-                            </div>
-                            <div className='w-[90%]'>
-                                <h5 className='text-[#00bfff] flex flex-col md:flex-row justify-between'><b>{experience.title}</b> <span className="text-text-light text-sm md:text-xs">{experience.period}</span></h5>
-                                <p className='pt-2 leading-7 text-lg'>{experience.description}</p>
-                                <div className='flex flex-wrap justify-evenly items-center mb-4'>
-                                {experience.technologiesLearnt.map((tech: string, index) => (
-                                    <span key={index} className='px-2 m-2 bg-[#ADD8E6] text-black rounded-lg text-sm'>{tech}</span>
-                                ))}
-                            </div>
-                            </div>
-                        </div>
-                    )
-                })}
-            </div>
+    <section id="experience" className="min-h-screen gradient-background text-white pt-20 pb-20">
+      <div className="container mx-auto px-4 py-12">
+        <div className="experience-title text-center mb-16">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            <span className="gradient-text">Experience</span>
+          </h1>
+          <p className="text-lg md:text-xl text-blue-400">
+            My professional journey and achievements
+          </p>
         </div>
-  )
-}
 
-export default Experience
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {ExperienceData.map((item) => (
+            <div
+              key={item.id}
+              className="experience-card group bg-white/5 backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1"
+            >
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0">
+                    <img
+                      src={item.logo}
+                      alt={item.title}
+                      className="w-16 h-16 object-contain rounded-lg bg-white/10 p-2 transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-blue-400 group-hover:text-white transition-colors">
+                      {item.title}
+                    </h3>
+                    <span className="text-sm text-gray-400">
+                      {item.period}
+                    </span>
+                  </div>
+                </div>
+                
+                <ul className="list-disc list-inside text-gray-300 mb-4">
+                  <li>{item.description}</li>
+                </ul>
+                
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {item.technologiesLearnt.map((tech: string, index: number) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-sm rounded-full bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20 transition-colors"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Experience;

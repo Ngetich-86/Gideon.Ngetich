@@ -1,88 +1,157 @@
-
 import { IoLogoReddit } from 'react-icons/io5';
 import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from "react-icons/io5";
-import { HiDownload } from "react-icons/hi";
 import { ReactTyped } from "react-typed";
 import image1 from "../assets/images/profile.png";
+import ScrollReveal from "scrollreveal";
+import { useEffect } from 'react';
 
 const HomePage = () => {
+  useEffect(() => {
+    // Initialize ScrollReveal
+    const sr = ScrollReveal({
+      distance: '50px',
+      duration: 1000,
+      delay: 200,
+      easing: 'ease-in-out',
+      reset: true,
+    });
+
+    // Reveal elements with the class 'fade-in'
+    sr.reveal('.fade-in', { origin: 'bottom' });
+
+    // Reveal elements with the class 'typing-effect'
+    sr.reveal('.typing-effect', { origin: 'left' });
+
+    // Reveal elements with the class 'animate-image'
+    sr.reveal('.animate-image', { 
+      origin: 'right',
+      distance: '250px',
+      duration: 1000,
+      easing: 'ease-in-out',
+      opacity: 0,
+      scale: 0.9,
+      reset: true
+    });
+    // Reveal the description from the bottom
+    sr.reveal('.description', {
+      origin: 'bottom',
+      distance: '250px',
+      duration: 1000,
+      easing: 'ease-in-out',
+      opacity: 0,
+      scale: 0.9,
+      reset:true
+    });
+
+    // Reveal elements with the class 'animate-social'
+    sr.reveal('.animate-social', {
+      origin: 'right',
+      distance: '100px',
+      duration: 800,
+      delay: 400,
+      easing: 'ease-in-out',
+      interval: 100
+    });
+  }, []);
+
   return (
-    <div className="w-full flex flex-col md:flex-row items-center p-6 font-medium">
+    <div className="h-fit min-h-screen w-full banner-gradient-background flex items-center justify-center max-xl:px-4 max-xl:pt-32 max-xl:pb-12">
       {/* Social Media Icons Section */}
-      <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-6 text-[#4169e1] text-2xl z-50 shadow-lg">
+      <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-6 text-2xl z-50">
         <a
-          href="https://www.linkedin.com/in/gideon-ngetich-6b7a96253/"
+          href="https://www.linkedin.com/in/gideon-ngetich/"
           target="_blank"
           rel="noreferrer"
           aria-label="LinkedIn"
-          className="hover:text-green-400 transition duration-300"
+          className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
         >
-          <IoLogoLinkedin />
+          <IoLogoLinkedin className="text-[#4169e1]" />
         </a>
         <a
           href="https://x.com/singh34274"
           target="_blank"
           rel="noreferrer"
           aria-label="Twitter"
-          className="hover:text-blue-400 transition duration-300"
+          className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
         >
-          <IoLogoTwitter />
+          <IoLogoTwitter className="text-[#4169e1]" />
         </a>
         <a
           href="https://github.com/Ngetich-86"
           target="_blank"
           rel="noreferrer"
           aria-label="GitHub"
-          className="hover:text-gray-400 transition duration-300"
+          className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
         >
-          <IoLogoGithub />
+          <IoLogoGithub className="text-[#4169e1]" />
         </a>
         <a
-  href="https://www.reddit.com/user/IndependentZone7413/"
-  target="_blank"
-  rel="noreferrer"
-  aria-label="Reddit"
-  className="hover:text-gray-400 transition duration-300"
->
-  <IoLogoReddit size={24} />
-</a>
-      </div>
-
-      {/* Text Section */}
-      <div className="flex-1 text-center md:text-left md:pr-8">
-        <h3 className="text-5xl font-bold text-[#4169e1] mb-4">
-          Hello 👋, I'm{" "}
-          <span className="text-[#00bfff]">
-            <ReactTyped
-              className="pl-2"
-              strings={["Gideon Ngetich", "a Tech Enthusiast"]}
-              typeSpeed={120}
-              backSpeed={70}
-              loop
-            />
-          </span>
-        </h3>
-        <p className="text-lg md:text-3xl mb-6 text-slate-200 ">
-          Software Developer & Cloud Enthusiast
-        </p>
-        <a
-          href="https://stdntpartners-my.sharepoint.com/:b:/g/personal/gideon_ngetich_studentambassadors_com/EeJudrpr3_ZKlFmA-GzZfR0BDlSnxsuOeda2QP3m20hbQQ?e=8P2hSp"
-          download
-          target='_blank'
-          className="inline-flex justify-center items-center gap-2 bg-[#87ceeb] text-black px-6 py-2 rounded-lg hover:bg-white hover:text-black transition duration-300"
+          href="https://www.reddit.com/user/IndependentZone7413/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Reddit"
+          className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
         >
-          Download Resume
-          <HiDownload />
+          <IoLogoReddit className="text-[#4169e1]" size={24} />
         </a>
       </div>
 
-      {/* Image Section */}
-      <div className="w-64 md:w-80 mt-4 md:mt-0">
-        <img
-          src={image1}
-          alt="me"
-          className="w-full h-auto rounded-lg shadow-lg transform transition duration-500 hover:scale-105"
-        />
+      {/* Main Content */}
+      <div className="container mx-auto px-6 py-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Text Section */}
+          <div className="flex-1 space-y-8">
+            <div className="space-y-4">
+              <h3 className="font-medium text-lg xs:text-3xl lg:text-2xl xl:text-5xl text-white typing-effect">
+                Hello 👋, I'm{" "}
+                <span className="text-[#00bfff]">
+                  <ReactTyped
+                    className="pl-2"
+                    strings={["< Gideon Ngetich />", "< a Tech Enthusiast />"]}
+                    typeSpeed={120}
+                    backSpeed={70}
+                    loop
+                  />
+                </span>
+              </h3>
+              <p className="text-2xl md:text-3xl text-slate-300 font-medium fade-in">
+                Software Developer & Cloud Enthusiast
+              </p>
+            </div>
+
+            <div className="space-y-8 fade-in">
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                <span className="gradient-text">Full Stack Developer</span>
+                <br />
+                Building Digital Experiences
+              </h1>
+              <p className="text-xl text-gray-600 dark:text-gray-300 description">
+                I create modern, responsive web applications with cutting-edge technologies.
+                Let's build something amazing together.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href='#contact' className="btn btn-primary">
+                  Get in Touch
+                </a>
+                <a href='#projects' className="btn glass px-6 py-3 rounded-lg hover:bg-white/20 transition-all">
+                  View Projects
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className="relative w-64 md:w-80 animate-image">
+            <div className="relative z-10">
+              <img
+                src={image1}
+                alt="Gideon Ngetich"
+                className='breathing-image w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500'
+              />
+            </div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#4169e1]/20 to-[#00bfff]/20 rounded-2xl blur-2xl -z-10"></div>
+          </div>
+        </div>
       </div>
     </div>
   );

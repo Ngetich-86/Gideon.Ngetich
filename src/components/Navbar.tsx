@@ -1,99 +1,82 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const Navbar = () => {
-    // const navigate = useNavigate(); useNavigate
-   
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  return (
+    <nav className="glass fixed w-full z-50 top-0 left-0 shadow-lg transition-all duration-300 ease-in-out">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <a href="#" className="text-2xl font-bold gradient-text">
+            Gideon Ngetich
+          </a>
 
-   
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8 text-xl">
+            <a href="#" className="text-blue-400 hover:text-white transition-colors duration-300">Home</a>
+            <a href="#about" className="text-blue-400 hover:text-white transition-colors duration-300">About</a>
+            <a href="#technologies" className="text-blue-400 hover:text-white transition-colors duration-300">Technologies</a>
+            <a href="#projects" className="text-blue-400 hover:text-white transition-colors duration-300">Projects</a>
+            <a href="#experience" className="text-blue-400 hover:text-white transition-colors duration-300">Experience</a>
+            <a href="#community" className="text-blue-400 hover:text-white transition-colors duration-300">Community</a>
+            <a href="#contact" className="text-blue-400 hover:text-white transition-colors duration-300">Contact</a>
+          </div>
 
-    const toggleDropdown = (event: React.MouseEvent) => {
-        event.stopPropagation();
-        setIsDropdownOpen(!isDropdownOpen);
-    };
-
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth >= 1024) {
-                setIsDropdownOpen(false);
-            }
-        };
-
-        const closeMenu = () => {
-            if (isDropdownOpen) {
-                setIsDropdownOpen(false);
-            }
-        };
-
-        window.addEventListener('resize', handleResize);
-        document.addEventListener('click', closeMenu);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-            document.removeEventListener('click', closeMenu);
-        };
-    }, [isDropdownOpen]);
-
-   
-
-    return (
-        <div className="navbar h-fit shadow-120 text-xl rounded ">
-            <div className="flex-1 gap-4 ml-6 md:ml-12">
-                {/* <img src={logo} alt="logo" className=" hidden md:block w-12 h-12" /> */}
-                <h1 className="hidden md:block md:text-2xl font-bold text-links"></h1>
-            </div>
-
-            <div className="flex-none gap-2">
-                <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-2 text-[#0099ff] font-semi-bold text-links text-2xl ">
-  <li><a href="#">Home</a></li>
-  <li><a href="#about">About Me</a></li>
-  <li><a href="#experience">Experience</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#contact">Contact Us</a></li>
-</ul>
-
-                </div>
-
-
-                <div className="flex lg:hidden">
-                    <button onClick={toggleDropdown} className="btn btn-circle">
-                        <svg
-                            className={`swap-off fill-current ${isDropdownOpen ? 'hidden' : 'block'}`}
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 512 512">
-                            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-                        </svg>
-                        <svg
-                            className={`swap-on fill-current ${isDropdownOpen ? 'block' : 'hidden'}`}
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 512 512">
-                            <polygon
-                                points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div className={`fixed top-0 left-0 w-[60%] h-screen bg-gray-800 border-r border-gray-900 transform ${isDropdownOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-500 ease-in-out lg:hidden z-50`}>
-                <ul className="menu p-4 text-cards">
-  <li className="border-b border-gray-300 py-2 text-text-light"><a href="#">Home</a></li>
-  <li className="border-b border-gray-300 py-2 text-text-light"><a href="#about">About Me</a></li>
-  <li className="border-b border-gray-300 py-2 text-text-light"><a href="#experience">Experience</a></li>
-  <li className="border-b border-gray-300 py-2 text-text-light"><a href="#projects">Projects</a></li>
-  <li className="border-b border-gray-300 py-2 text-text-light"><a href="#contact">Contact Us</a></li>
-</ul>
-
-                </div>
-
-                
-            </div>
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-2xl text-blue-400 hover:text-white transition-colors duration-300"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
-    );
-}
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden fade-in">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/5 backdrop-blur-sm rounded-lg shadow-lg mt-2">
+              <a
+                href="#"
+                className="block px-3 py-2 text-blue-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                className="block px-3 py-2 text-blue-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </a>
+              <a
+                href="#technologies"
+                className="block px-3 py-2 text-blue-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Technologies
+              </a>
+              <a
+                href="#community"
+                className="block px-3 py-2 text-blue-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Community
+              </a>
+              <a
+                href="#contact"
+                className="block px-3 py-2 text-blue-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;

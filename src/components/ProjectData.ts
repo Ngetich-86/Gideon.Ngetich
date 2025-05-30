@@ -5,16 +5,16 @@
 // import IMG5 from "../../images/machine.jpg";
 // import IMG6 from "../../images/netflix.jpg";
 import GalleryApp from "../assets/images/GalleryApp.png"
-import healther from "../assets/images/healthher.png"
-import prismcloud from "../assets/images/prismcloud.png"
+import healtSystem from "../assets/images/healt-system.png"
+import seatReserve from "../assets/images/seat-reserv-project.png"
 const ProjectData = [
     {
       id: 1,
-      image: healther,
-      title: "HealthHer",
-      github: "https://github.com/Ngetich-86/",
-      text: "Empowering women with accessible health resources and personalized wellness solutions.",
-      demo: "https://gallery-app-new-git-main-ngetich86s-projects.vercel.app/",
+      image: healtSystem,
+      title: "Automated Seat reservation system in PSV",
+      github: "https://github.com/Ngetich-86/Auto-seat-psv-Client",
+      text: "A comprehensive seat reservation system for public service vehicles (PSVs) that automates the booking process, enhances user experience, and optimizes seat management.",
+      demo: "https://www.loom.com/share/4bd7baef319640b4a4e07a385d232b2b?sid=4aa7d828-7f8a-42a8-b8a3-6a491b93c740",
     },
     {
       id: 2,
@@ -26,33 +26,12 @@ const ProjectData = [
     },
     {
       id: 3,
-      image: prismcloud,
-      title: "PrismCloudata",
-      github: "https://github.com/Ngetich-86/",
-      text: "A cloud-powered data platform enabling seamless analytics and scalable storage solutions.",  
-      demo: "https://her-health-hub-seven.vercel.app/",
+      image: seatReserve,
+      title: "Health-info-system",
+      github: "https://github.com/Ngetich-86/Health-Info-system-Task",
+      text: "A simple health information management system that allows doctors to register clients, create health programs, enroll clients in multiple programs, and expose client profiles via an API.",  
+      demo: "https://www.loom.com/share/6a9b81cb8b014ed8bb117f3efa331e4f?sid=3287e726-03d7-4ade-96e0-e6f7773d8522",
     }
-    // {
-    //     id: 4,
-    //     image: IMG1,
-    //     title: " first portfolio web",
-    //     github: "https://github.com/Ngetich-86/",
-    //     demo: "https://dribbble.com/shots/17290917-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps",
-    //   },
-    //   {
-    //     id: 5,
-    //     image: IMG1,
-    //     title: " Cmc web clone",
-    //     github: "https://github.com/Ngetich-86/",
-    //     demo: "https://dribbble.com/shots/17290917-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps",
-    //   },
-    //   {
-    //     id: 6,
-    //     image: IMG1,
-    //     title: "netflix clone",
-    //     github: "https://github.com/Ngetich-86/",
-    //     demo: "https://dribbble.com/shots/17290917-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps",
-    //   },
     
 ];
 export default ProjectData;

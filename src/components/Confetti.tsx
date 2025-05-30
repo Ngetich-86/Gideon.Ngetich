@@ -23,34 +23,38 @@
 
 // export default Confetti
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactConfetti from 'react-confetti';
 
-function Confetti() {
+const Confetti: React.FC = () => {
     const [dimensions, setDimensions] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: 0,
+        height: 0,
     });
-    // console.log(dimensions.width, dimensions.height);
 
     useEffect(() => {
         const handleResize = () => {
-            setDimensions({
-                width: window.innerWidth,
-                height: window.innerHeight,
-            });
+            const container = document.querySelector('.container');
+            if (container) {
+                setDimensions({
+                    width: container.clientWidth,
+                    height: window.innerHeight,
+                });
+            }
         };
+
+        // Initial size
+        handleResize();
 
         window.addEventListener('resize', handleResize);
 
-        // Cleanup the event listener on component unmount
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
 
     return (
-        <div style={{ position: 'relative' }}>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <ReactConfetti
                 width={dimensions.width}
                 height={dimensions.height}
@@ -62,6 +66,6 @@ function Confetti() {
             />
         </div>
     );
-}
+};
 
 export default Confetti;
