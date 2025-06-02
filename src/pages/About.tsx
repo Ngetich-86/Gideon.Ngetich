@@ -74,13 +74,13 @@ const About: React.FC = () => {
       title: 'DevOps & Tools',
       icon: <FaTools className="text-4xl text-blue-400" />,
       description: 'Implementing CI/CD pipelines, containerization, and cloud services for scalable applications.',
-      technologies: ['Docker', 'AWS', 'Git', 'CI/CD']
+      technologies: ['Docker', 'AWS', 'Azure', 'Git', 'CI/CD']
     }
   ];
 
   return (
-    <section id="about" className="min-h-screen gradient-background text-white pt-20 container">
-      <div className="container mx-auto px-4 py-12">
+    <section id="about" className="min-h-screen gradient-background text-white pt-20">
+      <div className=" mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Column - Image */}
           <div className="about-image">

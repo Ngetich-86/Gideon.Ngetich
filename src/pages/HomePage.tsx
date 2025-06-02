@@ -1,13 +1,13 @@
 import { IoLogoReddit } from 'react-icons/io5';
 import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from "react-icons/io5";
-import { ReactTyped } from "react-typed";
 import image1 from "../assets/images/profile.png";
 import ScrollReveal from "scrollreveal";
 import { useEffect } from 'react';
+import TypingEffect from '../components/TypingEffect';
 
 const HomePage = () => {
   useEffect(() => {
-    // Initialize ScrollReveal
+    
     const sr = ScrollReveal({
       distance: '50px',
       duration: 1000,
@@ -16,10 +16,9 @@ const HomePage = () => {
       reset: true,
     });
 
-    // Reveal elements with the class 'fade-in'
+    
     sr.reveal('.fade-in', { origin: 'bottom' });
 
-    // Reveal elements with the class 'typing-effect'
     sr.reveal('.typing-effect', { origin: 'left' });
 
     // Reveal elements with the class 'animate-image'
@@ -105,12 +104,12 @@ const HomePage = () => {
               <h3 className="font-medium text-lg xs:text-3xl lg:text-2xl xl:text-5xl text-white typing-effect">
                 Hello 👋, I'm{" "}
                 <span className="text-[#00bfff]">
-                  <ReactTyped
+                  <TypingEffect 
+                    text="< Gideon Ngetich />"
+                    typingSpeed={120}
+                    deletingSpeed={70}
+                    delay={1000}
                     className="pl-2"
-                    strings={["< Gideon Ngetich />", "< a Tech Enthusiast />"]}
-                    typeSpeed={120}
-                    backSpeed={70}
-                    loop
                   />
                 </span>
               </h3>

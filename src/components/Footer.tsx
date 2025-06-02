@@ -5,17 +5,20 @@ import ScrollReveal from 'scrollreveal';
 const Footer = () => {
   useEffect(() => {
     const sr = ScrollReveal({
-      distance: '50px',
-      duration: 1000,
+      distance: '30px',
+      duration: 800,
       delay: 200,
       easing: 'ease-in-out',
-      reset: true,
+      reset: false,
+      origin: 'bottom',
+      viewFactor: 0.3,
+      mobile: true
     });
 
     // Reveal the brand section
     sr.reveal('.footer-brand', {
       origin: 'left',
-      distance: '50px',
+      distance: '30px',
       duration: 800,
       easing: 'ease-in-out',
     });
@@ -23,7 +26,7 @@ const Footer = () => {
     // Reveal the quick links section
     sr.reveal('.footer-links', {
       origin: 'bottom',
-      distance: '50px',
+      distance: '30px',
       duration: 800,
       delay: 200,
       easing: 'ease-in-out',
@@ -32,7 +35,7 @@ const Footer = () => {
     // Reveal the social links section
     sr.reveal('.footer-social', {
       origin: 'right',
-      distance: '50px',
+      distance: '30px',
       duration: 800,
       delay: 200,
       easing: 'ease-in-out',
@@ -41,7 +44,7 @@ const Footer = () => {
     // Reveal the copyright section
     sr.reveal('.footer-copyright', {
       origin: 'bottom',
-      distance: '30px',
+      distance: '20px',
       duration: 800,
       delay: 400,
       easing: 'ease-in-out',
@@ -49,8 +52,8 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="banner-gradient-background backdrop-blur-sm text-white py-8">
-      <div className="container mx-auto px-4">
+    <footer className="banner-gradient-background backdrop-blur-sm text-white py-8 w-full overflow-hidden">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="footer-brand text-center md:text-left">
