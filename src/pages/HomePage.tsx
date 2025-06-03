@@ -4,10 +4,15 @@ import image1 from "../assets/images/profile.png";
 import ScrollReveal from "scrollreveal";
 import { useEffect } from 'react';
 import TypingEffect from '../components/TypingEffect';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 const HomePage = () => {
+  const { trackPageView, trackEvent } = useAnalytics();
+
   useEffect(() => {
-    
+    // Track page view
+    trackPageView('/', 'Home Page');
+
     const sr = ScrollReveal({
       distance: '50px',
       duration: 1000,
@@ -51,7 +56,14 @@ const HomePage = () => {
       easing: 'ease-in-out',
       interval: 100
     });
-  }, []);
+  }, [trackPageView]);
+
+  const handleSocialClick = (platform: string) => {
+    trackEvent('social_click', {
+      platform,
+      location: 'homepage'
+    });
+  };
 
   return (
     <div className="h-fit min-h-screen w-full banner-gradient-background flex items-center justify-center pt-24 pb-12 px-4">
@@ -63,6 +75,7 @@ const HomePage = () => {
           rel="noreferrer"
           aria-label="LinkedIn"
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
+          onClick={() => handleSocialClick('linkedin')}
         >
           <IoLogoLinkedin className="text-[#4169e1]" />
         </a>
@@ -72,6 +85,7 @@ const HomePage = () => {
           rel="noreferrer"
           aria-label="Twitter"
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
+          onClick={() => handleSocialClick('twitter')}
         >
           <IoLogoTwitter className="text-[#4169e1]" />
         </a>
@@ -81,6 +95,7 @@ const HomePage = () => {
           rel="noreferrer"
           aria-label="GitHub"
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
+          onClick={() => handleSocialClick('github')}
         >
           <IoLogoGithub className="text-[#4169e1]" />
         </a>
@@ -90,6 +105,7 @@ const HomePage = () => {
           rel="noreferrer"
           aria-label="Reddit"
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
+          onClick={() => handleSocialClick('reddit')}
         >
           <IoLogoReddit className="text-[#4169e1]" size={24} />
         </a>
@@ -129,10 +145,10 @@ const HomePage = () => {
                 Let's build something amazing together.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href='#contact' className="btn btn-primary">
+                <a href='#contact' className="btn btn-primary bg-[#4169e1] hover:bg-[#2d4eb3] text-white px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                   Get in Touch
                 </a>
-                <a href='#projects' className="btn glass px-6 py-3 rounded-lg hover:bg-white/20 transition-all">
+                <a href='#projects' className="btn bg-white/90 hover:bg-white text-[#4169e1] px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl font-medium">
                   View Projects
                 </a>
               </div>
