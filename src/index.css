@@ -20,6 +20,12 @@
 }
 
 @layer base {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
   * {
     @apply border-gray-200;
   }
@@ -28,7 +34,6 @@
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--background);
     color: var(--text);
-    overflow-x: hidden;
   }
 }
 .text-gradient {
@@ -194,9 +199,6 @@ p {
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
-  }
-  body{
-    overflow-x: hidden;
   }
 
   h2 {

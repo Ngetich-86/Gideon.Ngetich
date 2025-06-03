@@ -1,6 +1,6 @@
 import { IoLogoReddit } from 'react-icons/io5';
 import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from "react-icons/io5";
-import image1 from "../assets/images/profile.png";
+import image1 from "../assets/images/heroimg.png";
 import ScrollReveal from "scrollreveal";
 import { useEffect } from 'react';
 import TypingEffect from '../components/TypingEffect';

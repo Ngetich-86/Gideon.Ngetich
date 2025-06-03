@@ -110,7 +110,7 @@ const About: React.FC = () => {
             </p>
             <div className="flex gap-4">
               <a 
-                href="https://drive.google.com/file/d/1Tr0RFtWdX-1fMGZ9TucJS2RfBMVr7ieg/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1FrF8MLK2k0sUdCxETcA_HHBkYX2V-S0K/view?usp=sharing" 
                 className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 target="_blank" 
                 rel="noopener noreferrer"
