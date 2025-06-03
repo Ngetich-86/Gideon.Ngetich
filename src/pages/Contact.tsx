@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                   <FaEnvelope className="text-2xl text-blue-400" />
                   <div>
                     <h3 className="font-semibold text-blue-400">Email</h3>
-                    <p className="text-gray-300">gideon.ngetich@outlook.com</p>
+                    <p className="text-gray-300">ngetich.gideon@outlook.com</p>
                   </div>
                 </div>
 
