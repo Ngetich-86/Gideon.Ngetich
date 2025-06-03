@@ -195,6 +195,9 @@ p {
   h1 {
     font-size: 2.5rem;
   }
+  body{
+    overflow-x: hidden;
+  }
 
   h2 {
     font-size: 2rem;
