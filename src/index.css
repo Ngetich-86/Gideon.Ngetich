@@ -43,9 +43,32 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.beautiful-background{
+  background: url("./assets/images/beautiful_bg.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
 .gradient-background{
   background: url("./assets/images/background.png");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.gradient-stylish-background{
+  background: url("./assets/images/gradient_stylish.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.abstract-realistic-background{
+  background: url("./assets/images/abstract_realistic.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.gradient-tech-background{
+  background: url("./assets/images/gradient_tech.jpg");
   background-position: center;
   background-size:cover;
   background-repeat: no-repeat;

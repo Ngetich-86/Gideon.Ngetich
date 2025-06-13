@@ -41,7 +41,7 @@ const Projects = () => {
     }, []);
 
     return (
-        <section id="projects" className="min-h-screen banner-gradient-background text-white pt-20">
+        <section id="projects" className="min-h-screen gradient-tech-background text-white pt-20">
             <div className="py-20">
                 <div className="container mx-auto px-4">
                     <div className="projects-title text-center mb-16">

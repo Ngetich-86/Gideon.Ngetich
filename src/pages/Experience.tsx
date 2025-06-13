@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
   }, []);
 
   return (
-    <section id="experience" className="min-h-screen gradient-background text-white pt-20 pb-20">
+    <section id="experience" className="min-h-screen abstract-realistic-background text-white pt-20 pb-20">
       <div className="container mx-auto px-4 py-12">
         <div className="experience-title text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">

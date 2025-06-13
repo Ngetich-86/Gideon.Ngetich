@@ -49,7 +49,7 @@ const Technologies: React.FC = () => {
   ];
 
   return (
-    <section id="technologies" className="py-20 banner-gradient-background">
+    <section id="technologies" className="py-20 gradient-stylish-background">
       <div className="container mx-auto px-4">
         <div className="tech-title text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
