@@ -33,7 +33,7 @@ const Certification = () => {
   }, []);
 
   return (
-    <div className="min-h-screen gradient-background text-white pt-20 pb-20">
+    <div className="min-h-screen futuristic-gradient-background text-white pt-20 pb-20">
       <div className="container mx-auto px-4 py-12 max-w-7xl relative">
         <Confetti />
         <div className="certification-title text-center mb-16">

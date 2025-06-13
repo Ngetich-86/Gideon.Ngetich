@@ -66,7 +66,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="h-fit min-h-screen w-full banner-gradient-background flex items-center justify-center pt-24 pb-12 px-4">
+    <div className="h-fit min-h-screen w-full gradient-abstract-background flex items-center justify-center pt-24 pb-12 px-4">
       {/* Social Media Icons Section */}
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-6 text-2xl z-50">
         <a

@@ -73,6 +73,18 @@
   background-size:cover;
   background-repeat: no-repeat;
 }
+.gradient-abstract-background{
+  background: url("./assets/images/gradient_abstract.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.futuristic-gradient-background{
+  background: url("./assets/images/gradient_futuristic.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
 .banner-gradient-background{
   background: url("./assets/images/banner_background.png");
   background-position: center;
