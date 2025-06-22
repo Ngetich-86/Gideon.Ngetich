@@ -53,5 +53,23 @@ export const communityPhotos: CommunityPhoto[] = [
     imageUrl: "https://res.cloudinary.com/dwsxs74ow/image/upload/v1748983527/bpahbhmewaspxihnljpu.jpg",
     title: "Web 3 and base blockchain workshop",
     description: "Exploring the future of decentralized technologies and blockchain"
+  },
+  {
+    id: 9,
+    imageUrl: "https://res.cloudinary.com/dwsxs74ow/image/upload/v1750580088/vhcsri2lyq2hg4ukobxa.jpg",
+    title: "Got certified in Full Stack Web Development",
+    description: "Achieved certification in Full Stack Web Development from The Jitu web development bootcamp",
+  },
+  {
+    id: 10,
+    imageUrl: "https://res.cloudinary.com/dwsxs74ow/image/upload/v1750580234/jesehuyue56irlolig2x.jpg",
+    title: "Graduated from The Jitu web development bootcamp",
+    description: "Completed The Jitu web development bootcamp, enhancing my skills in web development"
+  },
+  {
+    id: 11,
+    imageUrl: "https://res.cloudinary.com/dwsxs74ow/image/upload/v1750580137/wwtazr7s8bxtuxeohcxq.jpg",
+    title: "My peers and I at The Jitu web development bootcamp benchmarking session",
+    description: "Collaborating with peers during the benchmarking session at The Jitu web development bootcamp"
   }
 ];
