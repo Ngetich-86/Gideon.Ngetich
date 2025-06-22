@@ -99,7 +99,7 @@ const HomePage = () => {
         >
           <IoLogoGithub className="text-[#4169e1]" />
         </a>
-        <a
+        {/* <a
           href="https://www.reddit.com/user/IndependentZone7413/"
           target="_blank"
           rel="noreferrer"
@@ -108,7 +108,7 @@ const HomePage = () => {
           onClick={() => handleSocialClick('reddit')}
         >
           <IoLogoReddit className="text-[#4169e1]" size={24} />
-        </a>
+        </a> */}
       </div>
 
       {/* Main Content */}
