@@ -51,7 +51,7 @@ const Footer = () => {
     });
   }, []);
 
-  return (
+    return (
     <footer className="banner-gradient-background backdrop-blur-sm text-white py-8 w-full overflow-hidden">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -104,7 +104,7 @@ const Footer = () => {
                 className="text-2xl text-gray-300 hover:text-white transition-colors hover:scale-110 transform"
               >
                 <FaLinkedin />
-              </a>
+        </a>
               <a
                 href="https://x.com/singh34274"
                 target="_blank"
@@ -121,13 +121,13 @@ const Footer = () => {
         <div className="footer-copyright mt-8 pt-8 border-t border-gray-700 text-center">
           <p className="text-gray-300">
             © {new Date().getFullYear()} Gideon Ngetich. All rights reserved.
-          </p>
+      </p>
         </div>
       </div>
-    </footer>
+  </footer>
   );
 };
-
+  
 export default Footer;
 
 

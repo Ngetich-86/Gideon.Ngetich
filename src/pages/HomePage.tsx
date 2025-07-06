@@ -135,7 +135,7 @@ const HomePage = () => {
             </div>
 
             <div className="space-y-8 fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                 <span className="gradient-text">Full Stack Developer</span>
                 <br />
                 Building Digital Experiences
