@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaProjectDiagram, FaBriefcase, FaUsers, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaCode, FaProjectDiagram, FaBriefcase, FaUsers, FaEnvelope } from 'react-icons/fa';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
