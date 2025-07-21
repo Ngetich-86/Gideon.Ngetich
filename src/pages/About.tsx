@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { FaCode, FaLaptopCode, FaServer, FaTools } from 'react-icons/fa';
 import ScrollReveal from 'scrollreveal';
+import Lottie from "lottie-react";
+import aboutAnimation from "../assets/images/aboutAnimation.json"
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -82,13 +84,13 @@ const About: React.FC = () => {
     <section id="about" className="min-h-screen beautiful-background text-white pt-20">
       <div className=" mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Left Column - Image */}
-          <div className="about-image">
-            <div className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm p-2 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10">
-              <img
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHRlY2h8ZW58MHx8MHx8fDA%3D"
-                alt="Profile"
-                className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
+          {/* lottie - Image */}
+          <div className="about-image flex justify-center items-center">
+            <div className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm p-2 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10 flex justify-center items-center">
+              <Lottie 
+                animationData={aboutAnimation} 
+                loop={true} 
+                className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto" 
               />
             </div>
           </div>
