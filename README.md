@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Gideon Ngetich Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! Explore my projects, experience, and skills all in one sleek and interactive place.
 
-Currently, two official plugins are available:
+[![Portfolio Image](./public/portfolio-readme.png)](https://www.gideonngetich.me/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Click the image above or visit [https://www.gideonngetich.me/](https://www.gideonngetich.me/) to see the live site.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies & Tools Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React** with TypeScript for a robust and scalable frontend.
+- **Tailwind CSS** for modern, responsive, and utility-first styling.
+- **Vite** for lightning-fast development and build process.
+- **Framer Motion** and custom **CSS animations** for smooth and engaging UI transitions.
+- **React Hooks** for state management and side effects.
+- **ESLint** and **Prettier** for clean, consistent code.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+---
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Features
+
+- Dynamic typing effect to showcase skills and roles.
+- Interactive navbar with smooth scrolling.
+- Responsive design optimized for all devices.
+- Confetti animation for celebratory effects.
+- Organized sections: About, Experience, Projects, Technologies, Education, Community Involvement, Certification, and Contact.
+
+---
+
+Feel free to explore the code and reach out via the contact section!
+
+---
+
+*Crafted with passion and creativity ❤ by Gideon Ngetich.*
