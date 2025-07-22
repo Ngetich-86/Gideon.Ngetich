@@ -1,4 +1,4 @@
-# Gideon Ngetich Portfolio
+# Gideon Ngetich Portfolio 👨‍💻☁️
 
 Welcome to my personal portfolio website! Explore my projects, experience, and skills all in one sleek and interactive place.
 
