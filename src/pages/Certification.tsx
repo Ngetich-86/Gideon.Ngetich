@@ -1,5 +1,5 @@
 import CertData, { Certification as CertificationEntry } from "../components/CertData";
-import { Suspense, lazy, useEffect } from 'react';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import ScrollReveal from 'scrollreveal';
 import { FaCertificate } from 'react-icons/fa';
 
@@ -12,6 +12,27 @@ const GROUP_ORDER: CertificationEntry['group'][] = [
 ];
 
 const Certification = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsNearViewport(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     const sr = ScrollReveal({
       distance: '50px',
@@ -41,11 +62,13 @@ const Certification = () => {
   }, []);
 
   return (
-    <div className="min-h-screen futuristic-gradient-background text-white pt-20 pb-20">
+    <div ref={sectionRef} className="min-h-screen futuristic-gradient-background text-white pt-20 pb-20">
       <div className="container mx-auto px-4 py-12 max-w-7xl relative">
-        <Suspense fallback={null}>
-          <Confetti />
-        </Suspense>
+        {isNearViewport && (
+          <Suspense fallback={null}>
+            <Confetti />
+          </Suspense>
+        )}
         <div className="certification-title text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Badges & Certifications</span>
