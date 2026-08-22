@@ -1,5 +1,5 @@
-import healtSystem from "../assets/images/healt-system.png"
-import seatReserve from "../assets/images/seat-reserv-project.png"
+import healtSystem from "../assets/images/healt-system.jpg"
+import seatReserve from "../assets/images/seat-reserv-project.jpg"
 
 export interface CaseStudy {
   overview: string;
