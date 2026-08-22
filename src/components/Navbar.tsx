@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-4 lg:space-x-6 text-base lg:text-lg">
+          <div data-testid="desktop-nav" className="hidden md:flex space-x-4 lg:space-x-6 text-base lg:text-lg">
             <a href="/" className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
               <FaHome className="text-lg" />
               Home
@@ -48,6 +48,9 @@ const Navbar: React.FC = () => {
           <button
             className="md:hidden text-2xl text-blue-400 hover:text-white transition-colors duration-300"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            data-testid="mobile-nav-toggle"
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -55,7 +58,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden fade-in">
+          <div data-testid="mobile-nav" className="md:hidden fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white/5 backdrop-blur-sm rounded-lg shadow-lg mt-2">
               <a
                 href="/"
