@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! Explore my projects, experience, and skills all in one sleek and interactive place.
 
-[![Portfolio Image](./public/portfolio-readme.png)](https://www.gideonngetich.me/)
+[![Portfolio Image](./public/portfolio-readme.jpg)](https://www.gideonngetich.me/)
 
 Click the image above or visit [https://www.gideonngetich.me/](https://www.gideonngetich.me/) to see the live site.
 
