@@ -23,6 +23,10 @@ dist-ssr
 /blob-report/
 /playwright/.cache/
 
+# Lighthouse CI
+/.lighthouseci/
+/lighthouse-report/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
