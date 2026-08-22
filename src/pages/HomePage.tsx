@@ -130,19 +130,19 @@ const HomePage = () => {
                 </span>
               </h3>
               <p className="text-2xl md:text-3xl text-slate-300 font-medium fade-in">
-                Software Developer & Cloud Enthusiast
+                Software Engineer specializing in Quality Engineering & Test Automation
               </p>
             </div>
 
             <div className="space-y-8 fade-in">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Full Stack Developer</span>
+                <span className="gradient-text">Building Reliable Software</span>
                 <br />
-                Building Digital Experiences
+                Through Testing & Automation
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 description">
-                I create modern, responsive web applications with cutting-edge technologies.
-                Let's build something amazing together.
+                I build, test, debug, and improve reliable software across frontend, backend,
+                APIs, databases, integrations, CI/CD, and cloud environments.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href='#contact' className="btn btn-primary bg-[#4169e1] hover:bg-[#2d4eb3] text-white px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
