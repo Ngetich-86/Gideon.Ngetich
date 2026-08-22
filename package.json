@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -23,6 +25,7 @@
     "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@types/scrollreveal": "^0.0.11",
