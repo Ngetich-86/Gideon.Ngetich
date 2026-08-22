@@ -71,7 +71,7 @@ const HomePage = () => {
         <a
           href="https://www.linkedin.com/in/gideon-ngetich/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="LinkedIn"
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
           onClick={() => handleSocialClick('linkedin')}
@@ -81,7 +81,7 @@ const HomePage = () => {
         <a
           href="https://github.com/Ngetich-86"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="GitHub"
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
           onClick={() => handleSocialClick('github')}
