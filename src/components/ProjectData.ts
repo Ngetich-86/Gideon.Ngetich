@@ -3,6 +3,7 @@ import seatReserve from "../assets/images/seat-reserv-project.png"
 
 export interface Project {
   id: number;
+  slug: string;
   image?: string;
   title: string;
   github: string;
@@ -15,6 +16,7 @@ export interface Project {
 const ProjectData: Project[] = [
     {
       id: 1,
+      slug: "automated-seat-reservation-system",
       image: seatReserve,
       title: "Automated Seat reservation system in PSV",
       github: "https://github.com/Ngetich-86/Auto-seat-psv-Client",
@@ -25,6 +27,7 @@ const ProjectData: Project[] = [
     },
     {
       id: 2,
+      slug: "health-info-system",
       image: healtSystem,
       title: "Health-info-system",
       github: "https://github.com/Ngetich-86/Health-Info-system-Task",
@@ -35,6 +38,7 @@ const ProjectData: Project[] = [
     },
     {
       id: 3,
+      slug: "springboot-nextjs-employee-manager",
       title: "Spring Boot + Next.js Employee Manager",
       github: "https://github.com/Ngetich-86/springboot-nextjs-employee-manager",
       text: "Full-stack employee management application demonstrating Java/Spring Boot backend development, a Next.js frontend, REST API integration, Redis caching, API rate limiting, and Docker-based application packaging.",

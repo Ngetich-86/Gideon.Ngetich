@@ -1,6 +1,7 @@
 import ProjectData from "../components/ProjectData";
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
     useEffect(() => {
@@ -107,6 +108,12 @@ const Projects = () => {
                                             </a>
                                         )}
                                     </div>
+                                    <Link
+                                        to={`/projects/${project.slug}`}
+                                        className="text-sm text-blue-400 hover:text-white transition-colors"
+                                    >
+                                        View Case Study →
+                                    </Link>
                                 </div>
                             </div>
                         ))}
