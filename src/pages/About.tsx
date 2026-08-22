@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { FaCode, FaLaptopCode, FaServer, FaTools } from 'react-icons/fa';
+import { FaBug, FaCode, FaDatabase, FaLaptopCode, FaServer, FaTools } from 'react-icons/fa';
 import ScrollReveal from 'scrollreveal';
 import Lottie from "lottie-react";
 import aboutAnimation from "../assets/images/aboutAnimation.json"
@@ -55,28 +55,40 @@ const About: React.FC = () => {
 
   const skills = [
     {
-      title: 'Frontend Development',
+      title: 'Quality Engineering',
+      icon: <FaBug className="text-4xl text-blue-400" />,
+      description: 'Designing and automating tests that validate functionality, APIs, and performance before issues reach production.',
+      technologies: ['Playwright', 'Selenium', 'Postman', 'Insomnia', 'Grafana k6', 'Jest', 'Supertest']
+    },
+    {
+      title: 'Programming & Software Engineering',
       icon: <FaCode className="text-4xl text-blue-400" />,
-      description: 'Building responsive and interactive user interfaces using React, TypeScript, and modern CSS frameworks.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js']
+      description: 'Writing and reasoning about code across multiple languages and paradigms.',
+      technologies: ['JavaScript', 'TypeScript', 'Java', 'C#', 'Python', 'SQL']
     },
     {
-      title: 'Backend Development',
-      icon: <FaServer className="text-4xl text-blue-400" />,
-      description: 'Creating robust server-side applications with Node.js, Python, and various databases.',
-      technologies: ['Node.js', 'Python', 'MongoDB', 'PostgreSQL']
-    },
-    {
-      title: 'Full Stack Solutions',
+      title: 'Frontend',
       icon: <FaLaptopCode className="text-4xl text-blue-400" />,
-      description: 'Developing end-to-end solutions that seamlessly integrate frontend and backend technologies.',
-      technologies: ['MERN Stack', 'REST APIs', 'GraphQL', 'WebSocket']
+      description: 'Building responsive, accessible user interfaces with modern web frameworks.',
+      technologies: ['React', 'Next.js', 'Tailwind CSS']
     },
     {
-      title: 'DevOps & Tools',
+      title: 'Backend & APIs',
+      icon: <FaServer className="text-4xl text-blue-400" />,
+      description: 'Designing and building server-side services and REST APIs.',
+      technologies: ['Node.js', 'Express.js', 'Java Spring Boot', 'REST APIs', 'Hono.js']
+    },
+    {
+      title: 'Databases',
+      icon: <FaDatabase className="text-4xl text-blue-400" />,
+      description: 'Working with relational and NoSQL data stores.',
+      technologies: ['PostgreSQL', 'MySQL', 'Microsoft SQL Server', 'MongoDB', 'SQLite']
+    },
+    {
+      title: 'DevOps, Cloud & Reliability',
       icon: <FaTools className="text-4xl text-blue-400" />,
-      description: 'Implementing CI/CD pipelines, containerization, and cloud services for scalable applications.',
-      technologies: ['Docker', 'AWS', 'Azure', 'Git', 'CI/CD']
+      description: 'Supporting reliable delivery through CI/CD pipelines, containers, and cloud infrastructure.',
+      technologies: ['Git', 'GitHub', 'GitLab', 'Docker', 'Jenkins', 'GitHub Actions', 'Azure', 'AWS', 'SonarQube', 'Trivy', 'Prometheus', 'Grafana', 'CI/CD']
     }
   ];
 
@@ -137,11 +149,11 @@ const About: React.FC = () => {
               <span className="gradient-text">What I Do</span>
             </h2>
             <p className="text-lg text-gray-400">
-              Specialized skills and technologies I work with
+              Technology ecosystems I work across, from quality engineering to full-stack development
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skill) => (
               <div
                 key={skill.title}

@@ -1,6 +1,19 @@
 import React, { useEffect } from "react";
-import { FaReact, FaNodeJs, FaAws, FaGitAlt, FaDatabase } from 'react-icons/fa';
-import { SiTypescript, SiJavascript, SiTailwindcss, SiDocker, SiNextdotjs } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaAws, FaGitAlt, FaJava } from 'react-icons/fa';
+import {
+  SiTypescript,
+  SiJavascript,
+  SiDocker,
+  SiNextdotjs,
+  SiCsharp,
+  SiPython,
+  SiPostgresql,
+  SiPlaywright,
+  SiSelenium,
+  SiPostman,
+  SiMicrosoftazure,
+  SiGithub,
+} from 'react-icons/si';
 import ScrollReveal from 'scrollreveal';
 
 const Technologies: React.FC = () => {
@@ -37,15 +50,21 @@ const Technologies: React.FC = () => {
   const skillData = [
     { name: 'JavaScript', icon: <SiJavascript className="text-4xl text-[#F7DF1E]" /> },
     { name: 'TypeScript', icon: <SiTypescript className="text-4xl text-[#3178C6]" /> },
-    { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-4xl text-[#06B6D4]" /> },
+    { name: 'Java', icon: <FaJava className="text-4xl text-[#E76F00]" /> },
+    { name: 'C#', icon: <SiCsharp className="text-4xl text-[#68217A]" /> },
+    { name: 'Python', icon: <SiPython className="text-4xl text-[#3776AB]" /> },
     { name: 'React JS', icon: <FaReact className="text-4xl text-[#61DAFB]" /> },
     { name: 'NextJS', icon: <SiNextdotjs className="text-4xl text-gray-800" /> },
     { name: 'Node JS', icon: <FaNodeJs className="text-4xl text-[#339933]" /> },
-    { name: 'SQL', icon: <FaDatabase className="text-4xl text-[#4169E1]" /> },
-    { name: 'Git', icon: <FaGitAlt className="text-4xl text-[#F05032]" /> },
-    { name: 'GitHub', icon: <FaGitAlt className="text-4xl text-[#181717]" /> },
-    { name: 'AWS', icon: <FaAws className="text-4xl text-[#FF9900]" /> },
+    { name: 'PostgreSQL', icon: <SiPostgresql className="text-4xl text-[#4169E1]" /> },
+    { name: 'Playwright', icon: <SiPlaywright className="text-4xl text-[#2EAD33]" /> },
+    { name: 'Selenium', icon: <SiSelenium className="text-4xl text-[#43B02A]" /> },
+    { name: 'Postman', icon: <SiPostman className="text-4xl text-[#FF6C37]" /> },
     { name: 'Docker', icon: <SiDocker className="text-4xl text-[#2496ED]" /> },
+    { name: 'Git', icon: <FaGitAlt className="text-4xl text-[#F05032]" /> },
+    { name: 'GitHub', icon: <SiGithub className="text-4xl text-gray-800" /> },
+    { name: 'AWS', icon: <FaAws className="text-4xl text-[#FF9900]" /> },
+    { name: 'Azure', icon: <SiMicrosoftazure className="text-4xl text-[#0078D4]" /> },
   ];
 
   return (
@@ -56,7 +75,7 @@ const Technologies: React.FC = () => {
             <span className="gradient-text">Tech Stack</span>
           </h2>
           <p className="text-lg text-gray-400">
-            Technologies I work with to build amazing applications
+            Core tools I use across quality engineering, software development, and cloud delivery
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
