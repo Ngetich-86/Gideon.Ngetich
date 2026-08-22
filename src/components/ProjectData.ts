@@ -4,7 +4,7 @@ import seatReserve from "../assets/images/seat-reserv-project.png"
 
 export interface Project {
   id: number;
-  image: string;
+  image?: string;
   title: string;
   github: string;
   text: string;
@@ -43,6 +43,14 @@ const ProjectData: Project[] = [
       demo: "https://www.loom.com/share/6a9b81cb8b014ed8bb117f3efa331e4f?sid=3287e726-03d7-4ade-96e0-e6f7773d8522",
       stack: ["REST API"],
       category: "Backend"
+    },
+    {
+      id: 4,
+      title: "Spring Boot + Next.js Employee Manager",
+      github: "https://github.com/Ngetich-86/springboot-nextjs-employee-manager",
+      text: "Full-stack employee management application demonstrating Java/Spring Boot backend development, a Next.js frontend, REST API integration, Redis caching, API rate limiting, and Docker-based application packaging.",
+      stack: ["Java", "Spring Boot", "Next.js", "Redis", "Docker", "REST APIs"],
+      category: "Full-Stack / Backend Engineering"
     }
 ];
 export default ProjectData;

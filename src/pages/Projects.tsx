@@ -57,11 +57,17 @@ const Projects = () => {
                         {ProjectData.map((project) => (
                             <div key={project.id} className="project-card group bg-white/5 backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1">
                                 <div className="relative overflow-hidden rounded-lg mb-4">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                                    />
+                                    {project.image ? (
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                                        />
+                                    ) : (
+                                        <div className="w-full h-48 flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-cyan-400/10 text-blue-400 font-semibold text-lg text-center px-4">
+                                            {project.title}
+                                        </div>
+                                    )}
                                 </div>
                                 <span className="text-xs font-semibold uppercase tracking-wide text-blue-400/70">
                                     {project.category}
