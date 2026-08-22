@@ -1,8 +1,9 @@
 import CertData, { Certification as CertificationEntry } from "../components/CertData";
-import Confetti from "../components/Confetti";
-import { useEffect } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import { FaCertificate } from 'react-icons/fa';
+
+const Confetti = lazy(() => import("../components/Confetti"));
 
 const GROUP_ORDER: CertificationEntry['group'][] = [
   'Cloud & AI',
@@ -42,7 +43,9 @@ const Certification = () => {
   return (
     <div className="min-h-screen futuristic-gradient-background text-white pt-20 pb-20">
       <div className="container mx-auto px-4 py-12 max-w-7xl relative">
-        <Confetti />
+        <Suspense fallback={null}>
+          <Confetti />
+        </Suspense>
         <div className="certification-title text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Badges & Certifications</span>

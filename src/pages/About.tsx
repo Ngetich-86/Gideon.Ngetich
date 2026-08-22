@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { FaBug, FaCode, FaDatabase, FaLaptopCode, FaServer, FaTools } from 'react-icons/fa';
 import ScrollReveal from 'scrollreveal';
-import Lottie from "lottie-react";
 import aboutAnimation from "../assets/images/aboutAnimation.json"
+
+const Lottie = lazy(() => import("lottie-react"));
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -99,11 +100,13 @@ const About: React.FC = () => {
           {/* lottie - Image */}
           <div className="about-image flex justify-center items-center">
             <div className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm p-2 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10 flex justify-center items-center">
-              <Lottie 
-                animationData={aboutAnimation} 
-                loop={true} 
-                className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto" 
-              />
+              <Suspense fallback={<div className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80" />}>
+                <Lottie
+                  animationData={aboutAnimation}
+                  loop={true}
+                  className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto"
+                />
+              </Suspense>
             </div>
           </div>
 
