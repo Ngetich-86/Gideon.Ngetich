@@ -126,10 +126,22 @@ const Contact: React.FC = () => {
               <div className="mt-8">
                 <h3 className="font-semibold mb-4 text-blue-400">Follow Me</h3>
                 <div className="flex gap-4">
-                  <a href="https://github.com/Ngetich-86" target="_blank" rel="noopener noreferrer" className="text-2xl text-blue-400 hover:text-white transition-colors">
+                  <a
+                    href="https://github.com/Ngetich-86"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    className="text-2xl text-blue-400 hover:text-white transition-colors"
+                  >
                     <FaGithub />
                   </a>
-                  <a href="https://www.linkedin.com/in/gideon-ngetich/" className="text-2xl text-blue-400 hover:text-white transition-colors">
+                  <a
+                    href="https://www.linkedin.com/in/gideon-ngetich/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="text-2xl text-blue-400 hover:text-white transition-colors"
+                  >
                     <FaLinkedin />
                   </a>
                 </div>

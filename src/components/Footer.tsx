@@ -93,6 +93,7 @@ const Footer = () => {
                 href="https://github.com/Ngetich-86"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
                 className="text-2xl text-gray-300 hover:text-white transition-colors hover:scale-110 transform"
               >
                 <FaGithub />
@@ -101,6 +102,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/gideon-ngetich/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="text-2xl text-gray-300 hover:text-white transition-colors hover:scale-110 transform"
               >
                 <FaLinkedin />
