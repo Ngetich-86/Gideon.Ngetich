@@ -101,14 +101,15 @@ const About: React.FC = () => {
               <span className="gradient-text">About Me</span>
             </h1>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I'm a passionate Full Stack Developer with a strong foundation in both frontend and backend technologies.
-              My journey in software development has equipped me with the skills to build modern, scalable applications
-              that solve real-world problems.
+              I am a Software Engineering graduate and QA Engineer focused on building reliable software
+              through technical testing and automation. My experience spans browser automation, API and
+              integration testing, regression testing, performance testing, CI/CD quality gates, and
+              full-stack development.
             </p>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              With a focus on clean code and user experience, I strive to create applications that are not only
-              functional but also intuitive and engaging. I'm constantly learning and adapting to new technologies
-              to stay at the forefront of web development.
+              Because I have worked on both development and QA, I approach quality from the application
+              architecture, API, database, user, and delivery perspectives rather than treating testing
+              as an isolated final step.
             </p>
             <div className="flex gap-4">
               <a 
