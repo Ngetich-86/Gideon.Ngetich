@@ -126,9 +126,9 @@ const ProjectCaseStudy = () => {
 
         {cs?.keyTakeaway && (
           <div className="mt-10 p-6 bg-blue-500/10 border border-blue-500/20 rounded-xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-blue-400/70 mb-2">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-blue-400/70 mb-2">
               Key Takeaway
-            </p>
+            </h2>
             <p className="text-gray-200 leading-relaxed">{cs.keyTakeaway}</p>
           </div>
         )}
