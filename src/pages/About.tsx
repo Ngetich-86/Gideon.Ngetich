@@ -112,9 +112,9 @@ const About: React.FC = () => {
 
           {/* Right Column - About Text */}
           <div className="about-text">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">About Me</span>
-            </h1>
+            </h2>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
               I am a Software Engineering graduate and QA Engineer focused on building reliable software
               through technical testing and automation. My experience spans browser automation, API and

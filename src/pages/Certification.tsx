@@ -47,9 +47,9 @@ const Certification = () => {
           <Confetti />
         </Suspense>
         <div className="certification-title text-center mb-16">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Badges & Certifications</span>
-          </h1>
+          </h2>
           <p className="text-lg md:text-xl text-blue-400">
             Professional credentials across cloud, Linux/cloud-native, and software development
           </p>
@@ -61,9 +61,9 @@ const Certification = () => {
 
           return (
             <div key={group} className="mb-14">
-              <h2 className="text-xl md:text-2xl font-semibold text-blue-400 mb-6 text-center md:text-left">
+              <h3 className="text-xl md:text-2xl font-semibold text-blue-400 mb-6 text-center md:text-left">
                 {group}
-              </h2>
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {entries.map((certification) => {
                   const cardContent = (

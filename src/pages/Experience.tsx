@@ -53,9 +53,9 @@ const Experience: React.FC = () => {
     <section id="experience" className="min-h-screen futuristic-gradient-background text-white pt-20 pb-20">
       <div className="container mx-auto px-4 py-12">
         <div className="experience-title text-center mb-16">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Experience</span>
-          </h1>
+          </h2>
           <p className="text-lg md:text-xl text-blue-400">
             My professional journey in QA engineering and software development
           </p>

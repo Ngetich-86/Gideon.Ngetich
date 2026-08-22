@@ -43,12 +43,6 @@ export const communityPhotos: CommunityPhoto[] = [
     description: "Recognizing the leadership and contributions of CSK Leads at the Microsoft ADC"
   },
   {
-    id: 7,
-    imageUrl: "https://res.cloudinary.com/dwsxs74ow/image/upload/v1748982946/ztfhdzwyl6vygdvta35j.jpg",
-    title: "",
-    description: ""
-  },
-  {
     id: 8,
     imageUrl: "https://res.cloudinary.com/dwsxs74ow/image/upload/v1748983527/bpahbhmewaspxihnljpu.jpg",
     title: "Web 3 and base blockchain workshop",

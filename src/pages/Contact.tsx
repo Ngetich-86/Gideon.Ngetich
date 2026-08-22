@@ -83,15 +83,15 @@ const Contact: React.FC = () => {
   return (
     <section id='contact' className="min-h-screen gradient-background text-white pt-20 pb-20">
       <div className="container mx-auto px-4">
-        <h1 className="contact-title text-center mb-12 text-3xl md:text-4xl font-bold">
+        <h2 className="contact-title text-center mb-12 text-3xl md:text-4xl font-bold">
           <span className="gradient-text">Get in Touch</span>
-        </h1>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="contact-info">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10">
-              <h2 className="gradient-text mb-8 text-2xl font-bold">Contact Information</h2>
+              <h3 className="gradient-text mb-8 text-2xl font-bold">Contact Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -152,7 +152,7 @@ const Contact: React.FC = () => {
           {/* Contact Form */}
           <div className="contact-form">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10">
-              <h2 className="gradient-text mb-8 text-2xl font-bold">Send a Message</h2>
+              <h3 className="gradient-text mb-8 text-2xl font-bold">Send a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>

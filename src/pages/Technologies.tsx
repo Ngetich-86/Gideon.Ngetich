@@ -84,7 +84,7 @@ const Technologies: React.FC = () => {
               key={skill.name}
               className="tech-card glass p-6 rounded-xl text-center transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
             >
-              <div className="mb-4">{skill.icon}</div>
+              <div className="mb-4" aria-hidden="true">{skill.icon}</div>
               <h3 className="font-bold text-xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 {skill.name}
               </h3>

@@ -46,9 +46,9 @@ const Projects = () => {
             <div className="py-20">
                 <div className="container mx-auto px-4">
                     <div className="projects-title text-center mb-16">
-                        <h1 className="text-3xl md:text-5xl font-bold mb-4">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4">
                             <span className="gradient-text">Projects</span>
-                        </h1>
+                        </h2>
                         <p className="text-lg md:text-xl text-blue-400">
                             Check out some of my recent work
                         </p>
