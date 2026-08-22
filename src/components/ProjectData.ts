@@ -1,4 +1,3 @@
-import GalleryApp from "../assets/images/GalleryApp.png"
 import healtSystem from "../assets/images/healt-system.png"
 import seatReserve from "../assets/images/seat-reserv-project.png"
 
@@ -26,16 +25,6 @@ const ProjectData: Project[] = [
     },
     {
       id: 2,
-      image: GalleryApp,
-      title: "Gallery App",
-      github: "https://github.com/Ngetich-86/react-portfolio",
-      text: " modern and responsive gallery app styled with Daisy UI, built using TypeScript and Firebase for secure authentication, efficient image storage, and real-time updates. ",
-      demo: "https://gallery-app-new-git-main-ngetich86s-projects.vercel.app/",
-      stack: ["TypeScript", "Firebase", "DaisyUI"],
-      category: "Frontend"
-    },
-    {
-      id: 3,
       image: healtSystem,
       title: "Health-info-system",
       github: "https://github.com/Ngetich-86/Health-Info-system-Task",
@@ -45,7 +34,7 @@ const ProjectData: Project[] = [
       category: "Backend"
     },
     {
-      id: 4,
+      id: 3,
       title: "Spring Boot + Next.js Employee Manager",
       github: "https://github.com/Ngetich-86/springboot-nextjs-employee-manager",
       text: "Full-stack employee management application demonstrating Java/Spring Boot backend development, a Next.js frontend, REST API integration, Redis caching, API rate limiting, and Docker-based application packaging.",
