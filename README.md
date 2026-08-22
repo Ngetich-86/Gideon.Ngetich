@@ -11,11 +11,13 @@ Click the image above or visit [https://www.gideonngetich.me/](https://www.gideo
 ## Technologies & Tools Used
 
 - **React** with TypeScript for a robust and scalable frontend.
-- **Tailwind CSS** for modern, responsive, and utility-first styling.
+- **Tailwind CSS** and **DaisyUI** for modern, responsive, utility-first styling.
 - **Vite** for lightning-fast development and build process.
-- **Framer Motion** and custom **CSS animations** for smooth and engaging UI transitions.
+- **React Router** for client-side routing and project case-study pages.
+- **EmailJS** for the contact form.
+- **ScrollReveal** and custom **CSS animations** for smooth and engaging UI transitions.
 - **React Hooks** for state management and side effects.
-- **ESLint** and **Prettier** for clean, consistent code.
+- **ESLint** for clean, consistent code.
 
 ---
 
@@ -25,7 +27,8 @@ Click the image above or visit [https://www.gideonngetich.me/](https://www.gideo
 - Interactive navbar with smooth scrolling.
 - Responsive design optimized for all devices.
 - Confetti animation for celebratory effects.
-- Organized sections: About, Experience, Projects, Technologies, Education, Community Involvement, Certification, and Contact.
+- Dedicated case-study pages for flagship projects.
+- Organized sections: About, Experience, Projects, Technologies, Certifications, Community Involvement, and Contact.
 
 ---
 
