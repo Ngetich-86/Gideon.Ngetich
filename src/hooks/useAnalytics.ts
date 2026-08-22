@@ -1,3 +1,5 @@
+type GtagParams = Record<string, string | number | boolean>;
+
 declare global {
   interface Window {
     gtag: (
@@ -6,8 +8,7 @@ declare global {
       params?: {
         page_path?: string;
         page_title?: string;
-        [key: string]: any;
-      }
+      } & GtagParams
     ) => void;
   }
 }
@@ -20,7 +21,7 @@ export const useAnalytics = () => {
     });
   };
 
-  const trackEvent = (action: string, params?: { [key: string]: any }) => {
+  const trackEvent = (action: string, params?: GtagParams) => {
     window.gtag('event', action, params);
   };
 
