@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 text-xl">
+          <div className="hidden md:flex space-x-4 lg:space-x-6 text-base lg:text-lg">
             <a href="/" className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
               <FaHome className="text-lg" />
               Home
@@ -34,10 +34,10 @@ const Navbar: React.FC = () => {
               <FaBriefcase className="text-lg" />
               Experience
             </a>
-            {/* <a href="/#community" className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+            <a href="/#community" className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
               <FaUsers className="text-lg" />
               Community
-            </a> */}
+            </a>
             <a href="/#contact" className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
               <FaEnvelope className="text-lg" />
               Contact
