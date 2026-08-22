@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import ScrollReveal from 'scrollreveal';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +10,7 @@ const Contact: React.FC = () => {
     email: '',
     message: ''
   });
+  const [isSending, setIsSending] = useState(false);
 
   useEffect(() => {
     const sr = ScrollReveal({
@@ -45,10 +48,29 @@ const Contact: React.FC = () => {
     });
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      toast.error('Message could not be sent — contact form is not configured yet.');
+      return;
+    }
+
+    setIsSending(true);
+    try {
+      await emailjs.send(serviceId, templateId, formData, publicKey);
+      toast.success("Message sent — I'll get back to you soon!");
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS send failed:', error);
+      toast.error('Something went wrong sending your message. Please try again.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -76,7 +98,9 @@ const Contact: React.FC = () => {
                   <FaEnvelope className="text-2xl text-blue-400" />
                   <div>
                     <h3 className="font-semibold text-blue-400">Email</h3>
-                    <p className="text-gray-300">ngetich.gideon@outlook.com</p>
+                    <a href="mailto:ngetich.gideon@outlook.com" className="text-gray-300 hover:text-white transition-colors">
+                      ngetich.gideon@outlook.com
+                    </a>
                   </div>
                 </div>
 
@@ -84,7 +108,9 @@ const Contact: React.FC = () => {
                   <FaPhone className="text-2xl text-blue-400" />
                   <div>
                     <h3 className="font-semibold text-blue-400">Phone</h3>
-                    <p className="text-gray-300">+254 742 252 910</p>
+                    <a href="tel:+254742252910" className="text-gray-300 hover:text-white transition-colors">
+                      +254 742 252 910
+                    </a>
                   </div>
                 </div>
 
@@ -165,8 +191,12 @@ const Contact: React.FC = () => {
                   />
                 </div>
 
-                <button type="submit" className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
-                  Send Message
+                <button
+                  type="submit"
+                  disabled={isSending}
+                  className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {isSending ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
