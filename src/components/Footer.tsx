@@ -59,7 +59,7 @@ const Footer = () => {
           <div className="footer-brand text-center md:text-left">
             <h3 className="text-2xl font-bold gradient-text mb-4">Gideon Ngetich</h3>
             <p className="text-gray-300">
-              Full Stack Developer passionate about creating innovative solutions
+              Software Engineer specializing in Quality Engineering & Test Automation
             </p>
           </div>
 
