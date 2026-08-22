@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 
@@ -104,14 +104,6 @@ const Footer = () => {
                 className="text-2xl text-gray-300 hover:text-white transition-colors hover:scale-110 transform"
               >
                 <FaLinkedin />
-        </a>
-              <a
-                href="https://x.com/singh34274"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl text-gray-300 hover:text-white transition-colors hover:scale-110 transform"
-              >
-                <FaTwitter />
               </a>
             </div>
           </div>

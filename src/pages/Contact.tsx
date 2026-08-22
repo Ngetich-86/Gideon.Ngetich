@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
 import ScrollReveal from 'scrollreveal';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
@@ -131,9 +131,6 @@ const Contact: React.FC = () => {
                   </a>
                   <a href="https://www.linkedin.com/in/gideon-ngetich/" className="text-2xl text-blue-400 hover:text-white transition-colors">
                     <FaLinkedin />
-                  </a>
-                  <a href="https://x.com/singh34274" className="text-2xl text-blue-400 hover:text-white transition-colors">
-                    <FaTwitter />
                   </a>
                 </div>
               </div>

@@ -1,5 +1,4 @@
-// import { IoLogoReddit } from 'react-icons/io5';
-import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import image1 from "../assets/images/heroimg.png";
 import ScrollReveal from "scrollreveal";
 import { useEffect } from 'react';
@@ -78,16 +77,6 @@ const HomePage = () => {
           onClick={() => handleSocialClick('linkedin')}
         >
           <IoLogoLinkedin className="text-[#4169e1]" />
-        </a>
-        <a
-          href="https://x.com/singh34274"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Twitter"
-          className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
-          onClick={() => handleSocialClick('twitter')}
-        >
-          <IoLogoTwitter className="text-[#4169e1]" />
         </a>
         <a
           href="https://github.com/Ngetich-86"
