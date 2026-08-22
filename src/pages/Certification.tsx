@@ -73,6 +73,7 @@ const Certification = () => {
                           <img
                             src={certification.icon}
                             alt={certification.name}
+                            loading="lazy"
                             className="w-full h-full object-contain rounded-lg"
                           />
                         ) : (

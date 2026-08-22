@@ -120,6 +120,10 @@ const Experience: React.FC = () => {
                     <img
                       src={item.logo}
                       alt={item.title}
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
                       className="w-16 h-16 object-contain rounded-lg bg-white/10 p-2 transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
