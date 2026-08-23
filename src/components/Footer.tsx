@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 
@@ -59,7 +59,7 @@ const Footer = () => {
           <div className="footer-brand text-center md:text-left">
             <h3 className="text-2xl font-bold gradient-text mb-4">Gideon Ngetich</h3>
             <p className="text-gray-300">
-              Full Stack Developer passionate about creating innovative solutions
+              Software Engineer specializing in Quality Engineering & Test Automation
             </p>
           </div>
 
@@ -68,17 +68,17 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4 text-blue-400">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <a href="/#about" className="text-gray-300 hover:text-white transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="/projects" className="text-gray-300 hover:text-white transition-colors">
+                <a href="/#projects" className="text-gray-300 hover:text-white transition-colors">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <a href="/#contact" className="text-gray-300 hover:text-white transition-colors">
                   Contact
                 </a>
               </li>
@@ -93,6 +93,7 @@ const Footer = () => {
                 href="https://github.com/Ngetich-86"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
                 className="text-2xl text-gray-300 hover:text-white transition-colors hover:scale-110 transform"
               >
                 <FaGithub />
@@ -101,17 +102,10 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/gideon-ngetich/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="text-2xl text-gray-300 hover:text-white transition-colors hover:scale-110 transform"
               >
                 <FaLinkedin />
-        </a>
-              <a
-                href="https://x.com/singh34274"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl text-gray-300 hover:text-white transition-colors hover:scale-110 transform"
-              >
-                <FaTwitter />
               </a>
             </div>
           </div>

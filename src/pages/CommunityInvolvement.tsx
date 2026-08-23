@@ -52,9 +52,9 @@ const CommunityInvolvement: React.FC = () => {
   return (
     <section id='community' className="min-h-screen banner-gradient-background text-white pt-20">
       <div className="max-w-7xl mx-auto px-4">
-        <h1 className="community-title text-4xl font-bold text-center text-white mb-8">
+        <h2 className="community-title text-4xl font-bold text-center text-white mb-8">
           Community Involvement
-        </h1>
+        </h2>
         
         <div className="community-carousel relative max-w-5xl mx-auto">
           <div className="relative">
@@ -70,6 +70,7 @@ const CommunityInvolvement: React.FC = () => {
                         <img
                           src={photo.imageUrl}
                           alt={photo.title}
+                          loading="lazy"
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
@@ -90,23 +91,27 @@ const CommunityInvolvement: React.FC = () => {
             {/* Navigation Buttons */}
             <button
               onClick={prevSlide}
+              aria-label="Previous slide"
               className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300"
             >
-              <FaChevronLeft className="text-gray-800 text-xl" />
+              <FaChevronLeft className="text-gray-800 text-xl" aria-hidden="true" />
             </button>
             <button
               onClick={nextSlide}
+              aria-label="Next slide"
               className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300"
             >
-              <FaChevronRight className="text-gray-800 text-xl" />
+              <FaChevronRight className="text-gray-800 text-xl" aria-hidden="true" />
             </button>
 
             {/* Dots Indicator */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-              {communityPhotos.map((_, index) => (
+              {communityPhotos.map((photo, index) => (
                 <button
-                  key={index}
+                  key={photo.id}
                   onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to slide ${index + 1}: ${photo.title}`}
+                  aria-current={currentSlide === index}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     currentSlide === index ? 'bg-white scale-125' : 'bg-white/50'
                   }`}

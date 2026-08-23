@@ -1,5 +1,4 @@
-// import { IoLogoReddit } from 'react-icons/io5';
-import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import image1 from "../assets/images/heroimg.png";
 import ScrollReveal from "scrollreveal";
 import { useEffect } from 'react';
@@ -72,7 +71,7 @@ const HomePage = () => {
         <a
           href="https://www.linkedin.com/in/gideon-ngetich/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="LinkedIn"
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
           onClick={() => handleSocialClick('linkedin')}
@@ -80,19 +79,9 @@ const HomePage = () => {
           <IoLogoLinkedin className="text-[#4169e1]" />
         </a>
         <a
-          href="https://x.com/singh34274"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Twitter"
-          className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
-          onClick={() => handleSocialClick('twitter')}
-        >
-          <IoLogoTwitter className="text-[#4169e1]" />
-        </a>
-        <a
           href="https://github.com/Ngetich-86"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="GitHub"
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110 animate-social"
           onClick={() => handleSocialClick('github')}
@@ -130,19 +119,19 @@ const HomePage = () => {
                 </span>
               </h3>
               <p className="text-2xl md:text-3xl text-slate-300 font-medium fade-in">
-                Software Developer & Cloud Enthusiast
+                Software Engineer specializing in Quality Engineering & Test Automation
               </p>
             </div>
 
             <div className="space-y-8 fade-in">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Full Stack Developer</span>
+                <span className="gradient-text">Building Reliable Software</span>
                 <br />
-                Building Digital Experiences
+                Through Testing & Automation
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 description">
-                I create modern, responsive web applications with cutting-edge technologies.
-                Let's build something amazing together.
+                I build, test, debug, and improve reliable software across frontend, backend,
+                APIs, databases, integrations, CI/CD, and cloud environments.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href='#contact' className="btn btn-primary bg-[#4169e1] hover:bg-[#2d4eb3] text-white px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">

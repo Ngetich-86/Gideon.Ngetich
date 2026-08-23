@@ -12,6 +12,21 @@ dist
 dist-ssr
 *.local
 
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Lighthouse CI
+/.lighthouseci/
+/lighthouse-report/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

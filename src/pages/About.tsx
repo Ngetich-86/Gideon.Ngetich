@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
-import { FaCode, FaLaptopCode, FaServer, FaTools } from 'react-icons/fa';
+import { Suspense, lazy, useEffect } from 'react';
+import { FaBug, FaCode, FaDatabase, FaLaptopCode, FaServer, FaTools } from 'react-icons/fa';
 import ScrollReveal from 'scrollreveal';
-import Lottie from "lottie-react";
 import aboutAnimation from "../assets/images/aboutAnimation.json"
+
+const Lottie = lazy(() => import("lottie-react"));
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -55,28 +56,40 @@ const About: React.FC = () => {
 
   const skills = [
     {
-      title: 'Frontend Development',
+      title: 'Quality Engineering',
+      icon: <FaBug className="text-4xl text-blue-400" />,
+      description: 'Designing and automating tests that validate functionality, APIs, and performance before issues reach production.',
+      technologies: ['Playwright', 'Selenium', 'Postman', 'Insomnia', 'Grafana k6', 'Jest', 'Supertest']
+    },
+    {
+      title: 'Programming & Software Engineering',
       icon: <FaCode className="text-4xl text-blue-400" />,
-      description: 'Building responsive and interactive user interfaces using React, TypeScript, and modern CSS frameworks.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js']
+      description: 'Writing and reasoning about code across multiple languages and paradigms.',
+      technologies: ['JavaScript', 'TypeScript', 'Java', 'C#', 'Python', 'SQL']
     },
     {
-      title: 'Backend Development',
-      icon: <FaServer className="text-4xl text-blue-400" />,
-      description: 'Creating robust server-side applications with Node.js, Python, and various databases.',
-      technologies: ['Node.js', 'Python', 'MongoDB', 'PostgreSQL']
-    },
-    {
-      title: 'Full Stack Solutions',
+      title: 'Frontend',
       icon: <FaLaptopCode className="text-4xl text-blue-400" />,
-      description: 'Developing end-to-end solutions that seamlessly integrate frontend and backend technologies.',
-      technologies: ['MERN Stack', 'REST APIs', 'GraphQL', 'WebSocket']
+      description: 'Building responsive, accessible user interfaces with modern web frameworks.',
+      technologies: ['React', 'Next.js', 'Tailwind CSS']
     },
     {
-      title: 'DevOps & Tools',
+      title: 'Backend & APIs',
+      icon: <FaServer className="text-4xl text-blue-400" />,
+      description: 'Designing and building server-side services and REST APIs.',
+      technologies: ['Node.js', 'Express.js', 'Java Spring Boot', 'REST APIs', 'Hono.js']
+    },
+    {
+      title: 'Databases',
+      icon: <FaDatabase className="text-4xl text-blue-400" />,
+      description: 'Working with relational and NoSQL data stores.',
+      technologies: ['PostgreSQL', 'MySQL', 'Microsoft SQL Server', 'MongoDB', 'SQLite']
+    },
+    {
+      title: 'DevOps, Cloud & Reliability',
       icon: <FaTools className="text-4xl text-blue-400" />,
-      description: 'Implementing CI/CD pipelines, containerization, and cloud services for scalable applications.',
-      technologies: ['Docker', 'AWS', 'Azure', 'Git', 'CI/CD']
+      description: 'Supporting reliable delivery through CI/CD pipelines, containers, and cloud infrastructure.',
+      technologies: ['Git', 'GitHub', 'GitLab', 'Docker', 'Jenkins', 'GitHub Actions', 'Azure', 'AWS', 'SonarQube', 'Trivy', 'Prometheus', 'Grafana', 'CI/CD']
     }
   ];
 
@@ -87,28 +100,31 @@ const About: React.FC = () => {
           {/* lottie - Image */}
           <div className="about-image flex justify-center items-center">
             <div className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm p-2 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10 flex justify-center items-center">
-              <Lottie 
-                animationData={aboutAnimation} 
-                loop={true} 
-                className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto" 
-              />
+              <Suspense fallback={<div className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80" />}>
+                <Lottie
+                  animationData={aboutAnimation}
+                  loop={true}
+                  className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto"
+                />
+              </Suspense>
             </div>
           </div>
 
           {/* Right Column - About Text */}
           <div className="about-text">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">About Me</span>
-            </h1>
+            </h2>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I'm a passionate Full Stack Developer with a strong foundation in both frontend and backend technologies.
-              My journey in software development has equipped me with the skills to build modern, scalable applications
-              that solve real-world problems.
+              I am a Software Engineering graduate and QA Engineer focused on building reliable software
+              through technical testing and automation. My experience spans browser automation, API and
+              integration testing, regression testing, performance testing, CI/CD quality gates, and
+              full-stack development.
             </p>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              With a focus on clean code and user experience, I strive to create applications that are not only
-              functional but also intuitive and engaging. I'm constantly learning and adapting to new technologies
-              to stay at the forefront of web development.
+              Because I have worked on both development and QA, I approach quality from the application
+              architecture, API, database, user, and delivery perspectives rather than treating testing
+              as an isolated final step.
             </p>
             <div className="flex gap-4">
               <a 
@@ -136,11 +152,11 @@ const About: React.FC = () => {
               <span className="gradient-text">What I Do</span>
             </h2>
             <p className="text-lg text-gray-400">
-              Specialized skills and technologies I work with
+              Technology ecosystems I work across, from quality engineering to full-stack development
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skill) => (
               <div
                 key={skill.title}
